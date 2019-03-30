@@ -22,7 +22,7 @@ app.get('/', function (req, res){
 });
 
 //connecting to database
-MongoClient.connect('mongodb://ralihachev:Centriaprojects2018@ds127736.mlab.com:27736/logistics', function (err, client){
+MongoClient.connect('mongodb://<login>:<password>@ds127736.mlab.com:27736/logistics', function (err, client){
    if (err) throw err;
     console.log('Connected to database');
     db=client.db('logistics');
