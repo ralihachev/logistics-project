@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-text text-center" href="#"  style="text-align: center; width: 100%; text-decoration: none; font-size: large">Our project name</a>
+            </nav>
+        </div>
+    </div>
+
+    <p class="display-4" style="text-align: center">Welcome to the website of shared logistics</p>
+
+    <div class="row">
+        <div class="col" style="text-align: center">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#forcompanies">For logistics companies</button>
+        </div>
+        <div class="col" style="text-align: center">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#forcustomers">For customers</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="forcompanies" tabindex="-1" role="dialog" aria-labelledby="forcompanies" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">For companies</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form method="post" action="/insert">
+                        <div class="form-group">
+                            <label for="companyname">Company name</label>
+                            <input type="text" class="form-control" id="companyname" placeholder="" name="companyname">
+                        </div>
+                        <div class="form-group">
+                            <label for="origincity">Origin city</label>
+                            <input type="text" class="form-control" id="origincity" placeholder="" name="origincity">
+                        </div>
+                        <div class="form-group">
+                            <label for="destinationcity">Destination city</label>
+                            <input type="text" class="form-control" id="destinationcity" placeholder="" name="destinationcity">
+                        </div>
+                        <div class="form-group">
+                            <label for="departuredate">Departure date</label>
+                            <input type="date" class="form-control" id="departuredate" placeholder="" name=departuredate>
+                        </div>
+                        <div class="form-group">
+                            <label for="arrivaldate">Arrival date</label>
+                            <input type="date" class="form-control" id="arrivaldate" placeholder="" name="arrivaldate">
+                        </div>
+                        <div class="form-group">
+                            <label for="avaliablespace">Avaliable space</label>
+                            <input type="text" class="form-control" id="avaliablespace" placeholder="" name="avaliablespace">
+                        </div>
+                        <div class="form-group">
+                            <label for="transporttype">Type of transport</label>
+                            <input type="text" class="form-control" id="transporttype" placeholder="" name="transporttype">
+                        </div>
+
+                        <button class="btn btn-secondary" type="submit">Submit my data</button>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="forcustomers" tabindex="-1" role="dialog" aria-labelledby="forcustomers" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">For customers</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="get" action="/search">
+                    <div class="form-group">
+                        <label for="origincity">Origin city</label>
+                        <input type="text" class="form-control" id="origincity" placeholder="" name="origincity">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationcity">Destination city</label>
+                        <input type="text" class="form-control" id="destinationcity" placeholder="" name="destinationcity">
+                    </div>
+                    <div class="form-group">
+                        <label for="departuredate">Departure date</label>
+                        <input type="date" class="form-control" id="departuredate" placeholder="" name=departuredate>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivaldate">Arrival date</label>
+                        <input type="date" class="form-control" id="arrivaldate" placeholder="" name="arrivaldate">
+                    </div>
+                    <div class="form-group">
+                        <label for="avaliablespace">Required space</label>
+                        <input type="text" class="form-control" id="avaliablespace" placeholder="" name="avaliablespace">
+                    </div>
+                    <div class="form-group">
+                        <label for="transporttype">Type of transport</label>
+                        <input type="text" class="form-control" id="transporttype" placeholder="" name="transporttype">
+                    </div>
+
+                    <button class="btn btn-secondary" type="submit">Find a company</button>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
